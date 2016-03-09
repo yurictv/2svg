@@ -1,0 +1,68 @@
+<html lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>Convert image to the SVG format</title>
+    <link href="view/main.css" rel="stylesheet" type="text/css" />
+	<script>
+		function show_wait () {
+			document.getElementById('content').style.display = 'none';	
+			document.getElementById('msg').style.display = 'none';	
+			document.getElementById('wait').style.display = 'block';	
+		}
+	</script>
+</head>
+
+
+<body>
+	
+<style>
+
+</style>
+
+<div id="content">
+<h1>Convert image to the SVG format</h1>
+
+<div class="korpus">
+	<input type="radio" name="odin" checked="checked" id="vkl1"/>
+	<label for="vkl1">Upload image</label><input type="radio" name="odin" id="vkl2"/>
+	<label for="vkl2">Enter image URL</label><input type="radio" name="odin" id="vkl3"/>
+	<div>
+		<form action="index.php" method="post" enctype="multipart/form-data" onsubmit="show_wait()">
+			<label for="file" style="border:0;">Upload your image you want to convert to SVG:</label><br />
+			<input title="Choose file to convert to SVG image" type="file" name="file" id="file" />
+			<br /><input type="checkbox" name="forse">
+			<label for="checkbox" style="border:0;">Force potrace algorithm (even for .eps & .pdf)</label>
+			<br /><input type="submit" value="Convert file to SVG" />
+		</form>
+	
+	</div>
+	<div>
+		<form action="index.php" method="post"  onsubmit="show_wait()">
+			<label for="imgurl" style="border:0;">Enter URL of an image you want to convert to SVG:</label><br />
+			<input type="text" name="imgurl" id="imgurl">
+			<br /><input type="checkbox" name="forse">
+			<label for="checkbox" style="border:0;">Force potrace algorithm (even for .eps & .pdf)</label>
+			<br /><input type="submit" value="Convert file to SVG" />
+		</form>
+	</div>
+</div>
+</div>
+
+
+
+<div style="width:100%; position:fixed; text-align: center; display:none;" id="wait">
+<img src="view/loading1.gif">     
+</div>
+
+<br />
+
+<div id="msg" style="">
+%msg%
+</div>
+
+
+
+  
+</body>
+</html>
+
