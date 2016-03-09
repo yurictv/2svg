@@ -1,4 +1,4 @@
-This php script is for converting any image to svg.
+This php script is for converting any image format to svg.
 
 DEPENDENCIES:
 ------------------------------------
