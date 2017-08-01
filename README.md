@@ -4,7 +4,7 @@ DEPENDENCIES:
 ------------------------------------
 OS Linux
 
-imageMagick ('convert' command)
+imageMagick (convert)
 
 potrace
 
